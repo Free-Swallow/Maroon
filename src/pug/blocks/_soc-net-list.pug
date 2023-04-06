@@ -1,0 +1,8 @@
+- const links = [{url: 'facebook.com', src: 'img/svg/facebook.svg', text: 'Мы на facebook'}, {url: 'instagram.com', src: 'img/svg/instagram.svg', text: 'Мы на instagram'}, {url: 'twitter.com', src: 'img/svg/twitter.svg', text: 'Мы на twitter'}]
+
+mixin socNetList()
+  ul.soc-net
+    each item in links
+      li.soc-net__item
+        a.soc-net__link(href=item.url class=`soc-net__link`)
+          img.soc-net__icon(src=item.src, alt=item.text)

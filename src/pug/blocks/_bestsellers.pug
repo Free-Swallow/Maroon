@@ -1,0 +1,15 @@
+- const bestsellersList = [{img: 'img/medium.jpg', altText: 'Белый крем в стеклянной баночке', name: 'High', description: 'Крем для лица'}]
+
+mixin bestsellers()
+  section.bestsellers
+    h2.bestsellers__title Бестселлеры
+    p.bestsellers__descrtiption
+      | Легендарные продукты,
+      | завоевавшие любовь
+      | наших клиентов
+    div.bestsellers__slider
+      ul.bestsellers__list
+        each item in bestsellersList
+          li.bestsellers__item
+            +mediumCard(item)
+      +buttonLink('#', 'Смотреть всё')

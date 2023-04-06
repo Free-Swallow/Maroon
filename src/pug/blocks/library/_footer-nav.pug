@@ -1,0 +1,7 @@
+- const footerLinks = [{name: 'Каталог', url: 'catalog.html'}, {name: 'О нас', url: '#'}, {name: 'Магазины', url: '#'}, {name: 'Контакты', url: '#'}]
+
+mixin footerNav()
+  ul.footer__nav
+    each item in footerLinks
+      li.footer__item
+        a.footer__link(href=item.url)= item.name

@@ -1,0 +1,19 @@
+extends pug/layout
+
+block variables
+  -
+    const page = 'Каталог'
+    const pageTitle = 'Maroon: Каталог косметики'
+    const NavLinks = [{name:'Каталог', url:'catalog.html'}, {name:'О нас', url:'about.html'}, {name:'Контакты', url:'contacts.html'}]
+
+block content
+  +header
+    +nav(NavLinks, page)
+  main.main
+    +pageTitle(pageTitle)
+    +catalogPreview
+    +cardsList
+    +recentlyViewed
+    +subscription
+    +contacts
+  +footer
