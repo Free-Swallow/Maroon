@@ -1,0 +1,6 @@
+mixin userMenu(menuData)
+  ul.user-menu
+    each item in menuData
+      li.user-menu__item
+        a(href="#").user-menu__link= item.linkAltText
+          img.user-menu__icon(src=item.src alt="")

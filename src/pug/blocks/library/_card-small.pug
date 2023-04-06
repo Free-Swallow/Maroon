@@ -1,0 +1,4 @@
+mixin smallCard(card, classes)
+  article.small-card(class=classes)
+    img.small-card__image(src=card.img alt=card.altText width=130 height=170)
+    a.small-card__link= card.title

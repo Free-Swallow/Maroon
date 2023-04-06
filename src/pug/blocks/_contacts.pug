@@ -1,0 +1,16 @@
+mixin contacts()
+  section.contacts
+    h2.contacts__title Контакты
+    address.contacts__address
+      dl.contacts__list.contacts-list
+        dt.contacts-list__name Адрес
+        dd.contacts-list__description
+          | Санкт-Петербург,
+          | ул. Большая Конюшенная, 19
+        dt.contacts-list__name Телефон
+        dd.contacts-list__description
+          a(href="tel:+89238889060") +7 (923) 888-90-60
+        dt.contacts-list__name E-mail
+        dd.contacts-list__description
+          a(href="mailto:info@maroon.ru") info@maroon.ru
+    img(src="img/map.jpg" width=290 height=281 alt="Мы на карте")

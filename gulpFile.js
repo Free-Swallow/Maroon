@@ -15,6 +15,16 @@ export const clean = async () => {
   return deleteSync("build");
 };
 
+export const copy = (done) => {
+  gulp.src([
+    "src/img/svg/*.svg",
+  ], {
+    base: "src"
+  })
+    .pipe(gulp.dest("build"))
+  done();
+}
+
 export const server = (done) => {
   browser.init({
     server: {
@@ -34,11 +44,13 @@ export const reload = (done) => {
 
 export const watcher = () => {
   gulp.watch("src/*.pug", gulp.series(pugConvert, reload));
+  gulp.watch("src/**/*.pug", gulp.series(pugConvert, reload));
   gulp.watch("src/style/*.css", gulp.series(reload));
 };
 
 export default gulp.series(
   clean,
+  copy,
   pugConvert,
   server,
   watcher,
