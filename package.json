@@ -4,8 +4,9 @@
   "description": "* Автор: [Swallow](https://github.com/Free-Swallow).",
   "main": "index.js",
   "scripts": {
+    "puglint": "pug-lint \"src/**/*.pug\" --syntax .pug-lintrc",
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
@@ -26,9 +27,12 @@
     "browser-sync": "^2.29.1",
     "del": "^7.0.0",
     "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
     "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "pug-lint": "^2.7.0",
     "stylelint": "^15.3.0",
     "stylelint-config-htmlacademy": "^1.1.4"
   },
@@ -39,6 +43,9 @@
     "not op_mini all",
     "not < 0.25%"
   ],
+  "lint-staged": {
+    "*.pug": "pug-lint"
+  },
   "editorconfig-cli": [
     "*.json",
     "*.js",

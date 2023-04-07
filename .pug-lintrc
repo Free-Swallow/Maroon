@@ -1,0 +1,8 @@
+{
+  "disallowDuplicateAttributes": true,
+  "disallowIdLiteralsBeforeAttributes": true,
+  "disallowIdLiterals": true,
+  "disallowLegacyMixinCall": true,
+  "disallowMultipleLineBreaks": true,
+  "disallowSpacesInsideAttributeBrackets": true
+}

@@ -1,0 +1,20 @@
+- filterData = [{name: 'Уход для лица', options: ['Крема', 'Сыворотки', 'Маски', 'Пенки', 'Тоники', 'Пудры']}, {name: 'Уход для тела', options: ['Крема', 'Сыворотки', 'Маски', 'Пенки', 'Тоники', 'Пудры']}]
+
+mixin filterList()
+  div.filters
+    div.filters__option
+      div.filter__header
+        p.filters__description Уход для лица
+        button.filters__toggler(type='button') Открыть меню фильтра
+      ul.filters__list
+        li.filter__item
+          input(type='checkbox')
+          span Крема
+    div.filters__option
+      div.filter__header
+        p.filters__description Уход для тела
+        button.filters__toggler(type='button') Открыть меню фильтра
+    div.filters__option
+      div.filter__header
+        p.filters__description Тип кожи
+        button.filters__toggler(type='button') Открыть меню фильтра
