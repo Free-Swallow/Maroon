@@ -4,7 +4,7 @@
   "description": "* Автор: [Swallow](https://github.com/Free-Swallow).",
   "main": "index.js",
   "scripts": {
-    "puglint": "pug-lint \"src/**/*.pug\" --syntax .pug-lintrc",
+    "puglint": "pug-lint \\\"src/**/*.pug\\\" --syntax .pug-lintrc.json",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
