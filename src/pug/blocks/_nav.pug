@@ -1,6 +1,6 @@
 mixin nav(NavLinks, activePage)
   nav.nav
-    ul.nav__list( a="a" a="a" )
+    ul.nav__list
       each item in NavLinks
         li.nav__item
           a.nav__link(href=`${item.url} ${activePage === item.name ? 'nav-item--active' : ''}`)= item.name
