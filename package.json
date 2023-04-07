@@ -32,6 +32,8 @@
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
     "pug-lint": "^2.7.0",
     "stylelint": "^15.3.0",
     "stylelint-config-htmlacademy": "^1.1.4"
