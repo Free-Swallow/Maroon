@@ -48,7 +48,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-satged"
+      "pre-commit": "lint-staged"
     }
   },
   "editorconfig-cli": [
