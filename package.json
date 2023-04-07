@@ -46,7 +46,7 @@
     "not < 0.25%"
   ],
   "lint-staged": {
-    "src/**/*.pug": "pug-lint"
+    "src/*.pug": "pug-lint"
   },
   "husky": {
     "hooks": {
