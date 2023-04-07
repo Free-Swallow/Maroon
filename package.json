@@ -4,9 +4,8 @@
   "description": "* Автор: [Swallow](https://github.com/Free-Swallow).",
   "main": "index.js",
   "scripts": {
-    "puglint": "pug-lint \"src/**/*.pug\" --syntax .pug",
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"src/style/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
