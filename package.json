@@ -46,6 +46,11 @@
   "lint-staged": {
     "*.pug": "pug-lint"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-satged"
+    }
+  },
   "editorconfig-cli": [
     "*.json",
     "*.js",
