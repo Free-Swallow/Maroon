@@ -43,13 +43,13 @@
     "not op_mini all",
     "not < 0.25%"
   ],
-  "lint-staged": {
-    "*.pug": "pug-lint"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.pug": "pug-lint"
   },
   "editorconfig-cli": [
     "*.json",
