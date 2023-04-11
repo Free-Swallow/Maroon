@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"src/style/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
@@ -26,9 +26,14 @@
     "browser-sync": "^2.29.1",
     "del": "^7.0.0",
     "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
     "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "pug-lint": "^2.7.0",
     "stylelint": "^15.3.0",
     "stylelint-config-htmlacademy": "^1.1.4"
   },
@@ -39,13 +44,21 @@
     "not op_mini all",
     "not < 0.25%"
   ],
+  "lint-staged": {
+    "src/*.pug": "pug-lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "editorconfig-cli": [
     "*.json",
     "*.js",
-    "source/*.html",
-    "source/js/**/*.js",
-    "source/img/**/*.svg",
-    "source/sass/**/*.scss"
+    "src/*.html",
+    "src/js/**/*.js",
+    "src/img/**/*.svg",
+    "src/sass/**/*.scss"
   ],
   "engines": {
     "node": "^16"

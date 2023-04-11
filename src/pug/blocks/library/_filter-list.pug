@@ -1,0 +1,7 @@
+mixin filterList(list)
+  ul.filter-list
+    each item in list
+      li.filter-list__item
+        label.filter-list__label
+          input.filter-list__input(type='checkbox')
+          span.filter-list__name= item

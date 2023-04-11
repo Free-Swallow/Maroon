@@ -1,4 +1,5 @@
 import gulp from "gulp";
+import plumber from 'gulp-plumber';
 import {create as bsCreate} from 'browser-sync';
 import pug from "gulp-pug";
 import {deleteSync} from "del";
@@ -7,6 +8,7 @@ const browser = bsCreate();
 
 export const pugConvert = () => {
   return gulp.src("src/*.pug", {base: "src"})
+    .pipe(plumber())
     .pipe(pug({}))
     .pipe(gulp.dest("build"));
 };
@@ -17,7 +19,7 @@ export const clean = async () => {
 
 export const copy = (done) => {
   gulp.src([
-    "src/img/svg/*.svg",
+    "src/img/**/*.{png,jpg,svg,webp,avif}",
   ], {
     base: "src"
   })

@@ -1,0 +1,7 @@
+mixin sliderList(data)
+  div.slider-list
+    each item in data
+      div.slider-list__header
+        p.slider-list__title= item.name
+        button.slider-list__toggler Кнопка открытия и закрытия меню
+        +filterList(item.options)
