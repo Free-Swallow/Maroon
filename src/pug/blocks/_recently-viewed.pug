@@ -1,2 +1,39 @@
+-
+  const recentlyList = [
+    {
+      img: 'img/clean.jpg',
+      altText: 'Разводимый белый порошок',
+      name: 'Clean',
+      description: 'Маска для лица',
+      price: '490Р',
+      volume: '100g'
+    },
+    {
+      img: 'img/lotos.jpg',
+      altText: 'Белый крем',
+      name: 'Lotos',
+      description: 'Маска для лица',
+      price: '890Р',
+      volume: '50ml'
+    },
+    {
+      img: 'img/lavender.jpg',
+      altText: 'Кусковое мыло бело-фиолетового цвета',
+      name: 'Lavender',
+      description: 'Мыло ручной работы',
+      price: '290Р',
+      volume: '50g'
+    },
+    {
+      img: 'img/coconut.jpg',
+      altText: 'Белый крем в белой пластиковой баночке',
+      name: 'Coconut',
+      description: 'Масло для тела',
+      price: '990Р',
+      volume: '300g'
+    }
+  ]
+
 mixin recentlyViewed()
   section.recently-viewed
+    +shortCardList(recentlyList, 'Недавно смотрели')

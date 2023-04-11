@@ -1,0 +1,8 @@
+mixin shortCardList(data, title)
+  div.short-card-list
+    h1.short-card-list__title= title
+    ul.short-card-list__list
+      each item in data
+        li.short-card-list__item
+          +largeCard(item)
+  +controlPages
