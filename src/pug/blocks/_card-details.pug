@@ -1,2 +1,38 @@
+-
+  const product = {
+    img: 'img/rose.jpg',
+    altText: 'Белый крем в стеклянной баночке',
+    name: 'Rose',
+    description: 'Крем для лица',
+    fullDescription: 'Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей. Крем равномерно распределяется по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток.',
+    price: '990P',
+    compound: 'Aqua, Cyclomethicone, Dicaprylyl Carbonate, Butylene Glycol, Glycerin, Tapioca Starch, Nelumbium Speciosum Flower Extract, Calendula Officinalis Flower Extract, Propylene Glycol, Tocopherol, Glycine Soja Oil, Dimethiconol, Citronellol, Limonene.',
+    modeOfApplication: 'Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода.',
+    volumes: [50, 30],
+    volume: '50ml'
+  }
+
+  const sliderData = [
+    {
+      name: 'Состав',
+      description: product.compound
+    },
+    {
+      name: 'Способ применнения',
+      description: product.modeOfApplication
+    }
+  ]
+
 mixin cardDetails()
   section.card-details
+    img(src=product.img alt=product.altText, width=290 height=260)
+    div.right-half
+      p.card-details__name= product.name
+      p.card-details__description= product.description
+      p.card-details__full-description= product.fullDescription
+    +sliderListType2(sliderData)
+    form.card-details__form
+      +radioList(product.volumes, 'options', 'Объем:')
+      div.card-details__footer
+        p.card-details__price= product.price
+        +button('submit', 'Добавить в корзину')

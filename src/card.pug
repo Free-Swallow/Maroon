@@ -1,5 +1,10 @@
 extends pug/layout
 
+block variables
+  -
+    const page = 'Карточка товара'
+    const pageTitle = 'Maroon: информация о товаре'
+
 block content
   a(href="index.html")  Главная
   a(href="catalog.html")  Каталог
