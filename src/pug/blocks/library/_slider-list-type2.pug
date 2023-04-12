@@ -3,5 +3,5 @@ mixin sliderListType2(data)
     each item in data
       div.slider-list__header
         p.slider-list__title= item.name
-        button.slider-list__toggler Кнопка открытия и закрытия меню
+        button.slider-list__toggler(type="button") Кнопка открытия и закрытия меню
         p.slider-list__description= item.description
