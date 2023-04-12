@@ -48,7 +48,7 @@
     "not < 0.25%"
   ],
   "lint-staged": {
-    "src/*.pug": "stylelint"
+    "src/sass/**/*.scss": "stylelint"
   },
   "husky": {
     "hooks": {
