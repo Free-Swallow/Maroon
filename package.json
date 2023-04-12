@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"src/style/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --fix",
     "lint": "npm run editorconfig && npm run stylelint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
@@ -26,13 +26,16 @@
     "browser-sync": "^2.29.1",
     "del": "^7.0.0",
     "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.1.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
     "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
+    "postcss-csso": "^6.0.1",
     "pug-lint": "^2.7.0",
     "stylelint": "^15.3.0",
     "stylelint-config-htmlacademy": "^1.1.4"
@@ -45,7 +48,7 @@
     "not < 0.25%"
   ],
   "lint-staged": {
-    "src/*.pug": "pug-lint"
+    "src/*.pug": "stylelint"
   },
   "husky": {
     "hooks": {
