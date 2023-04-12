@@ -52,7 +52,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'Husky work'"
+      "pre-commit": "echo 'hi'"
     }
   },
   "editorconfig-cli": [
