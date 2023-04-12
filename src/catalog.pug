@@ -1,4 +1,4 @@
-extends pug/layout
+extends pug/layout.pug
 
 block variables
   -
@@ -6,7 +6,7 @@ block variables
     const pageTitle = 'Maroon: Каталог косметики'
 
 block content
-  +header
+  +header(page)
   main.main
     +pageTitle(pageTitle)
     +catalogPreview
