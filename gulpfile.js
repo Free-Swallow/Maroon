@@ -7,7 +7,9 @@ import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import {create as bsCreate} from 'browser-sync';
 import sourcemap from 'gulp-sourcemaps';
-import pug from "gulp-pug";
+import pug from 'gulp-pug';
+import pugLinter from 'gulp-pug-linter';
+import pugLintStylish from 'puglint-stylish';
 import {deleteSync} from "del";
 
 const browser = bsCreate();
@@ -68,6 +70,12 @@ export const watcher = () => {
   gulp.watch("src/*.pug", gulp.series(pugConvert, reload));
   gulp.watch("src/**/*.pug", gulp.series(pugConvert, reload));
   gulp.watch("src/sass/**/*.scss", gulp.series(style, reload));
+};
+
+export const puglint = () => {
+  return gulp.src("src/*.pug")
+    .pipe(plumber())
+    .pipe(pugLinter({failAfterError: true, reporter: pugLintStylish}))
 };
 
 export default gulp.series(
