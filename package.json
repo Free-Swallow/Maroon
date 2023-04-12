@@ -48,7 +48,7 @@
     "not < 0.25%"
   ],
   "lint-staged": {
-    "src/sass/**/*.scss": "stylelint"
+    "src/sass/**/*.scss": "npm run stylelint"
   },
   "husky": {
     "hooks": {
