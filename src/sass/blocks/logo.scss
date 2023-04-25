@@ -1,0 +1,23 @@
+.logo {
+  @include flex-col;
+
+  color: $main-dark;
+
+  &__image {
+    width: 81px;
+    height: 13px;
+  }
+
+  @media ($tablet) {
+    &__image {
+      width: 131px;
+      height: 21px;
+    }
+  }
+}
+
+.logo:hover,
+.logo:focus,
+.logo:active {
+  @include interactive-style;
+}

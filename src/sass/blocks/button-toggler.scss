@@ -1,0 +1,38 @@
+.toggler {
+  @include flex-col;
+
+  width: 20px;
+  height: 14px;
+  border: none;
+  background: transparent;
+  justify-content: space-around;
+  cursor: pointer;
+  color: $main-dark;
+
+  &__image {
+    width: 20px;
+  }
+
+  @media ($tablet) {
+    width: 22px;
+    height: 18px;
+  }
+
+  @media ($desktop) {
+    display: none;
+  }
+}
+
+.toggler:hover,
+.toggler:focus,
+.toggler:active {
+  @include interactive-style;
+}
+
+.toggler--close .toggler__image--open {
+  display: none;
+}
+
+.toggler--open .toggler__image--close {
+  display: none;
+}

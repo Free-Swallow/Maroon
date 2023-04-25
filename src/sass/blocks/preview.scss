@@ -1,0 +1,90 @@
+.preview {
+  width: 100%;
+  background-color: $bc-preview;
+  background-image: url("../img/main-mob@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  z-index: -10;
+
+  &__wrapper {
+    @include flex-col;
+  }
+
+  &__title-wrapper {
+    @include flex-col;
+  }
+
+  &__title {
+    color: $main-dark;
+    font-family: "M-plus", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__title-header {
+    line-height: 49px;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: 500;
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  &__card-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__button {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  @media ($tablet) {
+    &__title-wrapper {
+      width: 274px;
+      position: absolute;
+      z-index: 10;
+      top: 140px;
+    }
+
+    &__title-header {
+      font-size: $fs-great;
+      line-height: $lh-set-fourth;
+      padding-bottom: 10px;
+    }
+
+    &__title {
+      font-size: $fs-regular-plus;
+      line-height: $lh-set-fifth;
+    }
+  }
+
+  @media ($desktop) {
+    &__card-list {
+      justify-content: space-between;
+      padding: 0 35px;
+    }
+
+    &__title-wrapper {
+      top: 180px;
+    }
+
+    &__title-header {
+      font-size: $fs-great-plus;
+      line-height: $lh-set-sixth;
+      padding-bottom: 10px;
+    }
+  }
+}

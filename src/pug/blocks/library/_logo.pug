@@ -1,3 +1,4 @@
-mixin logo(page)
-  a.logo(href= page === 'Maroon' ? '#' : 'index.html')
-    img.logo__icon(src="img/svg/maroon.svg" alt="Maroon")
+mixin logo(page, classes)
+  a.logo(href= page === 'Maroon' ? '#' : 'index.html' aria-label="Логотип Maroon" class=classes)
+    svg.logo__image
+      use(xlink:href="img/sprite.svg#maroon")

@@ -1,1 +1,3 @@
 src/sass/global/normolize.scss
+src/sass/global/mixins.scss
+src/sass/global/variables.scss

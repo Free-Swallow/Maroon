@@ -1,0 +1,24 @@
+.soc-net {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 10px 0 15px;
+
+  &__item {
+    list-style: none;
+    padding: 15px 0;
+  }
+
+  &__image {
+    max-height: 20px;
+    max-width: 20px;
+    color: $main-dark;
+  }
+
+  &__item:hover,
+  &__item:focus,
+  &__item:active &__iamge {
+    @include interactive-style;
+  }
+}

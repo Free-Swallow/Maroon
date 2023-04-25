@@ -1,0 +1,65 @@
+.nav {
+  position: absolute;
+  top: 76px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  background-color: $bc-navigation;
+  padding: 15px 15px;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 17.5px 0;
+    list-style: none;
+    font-size: $fs-large;
+    font-weight: $fw-medium;
+    line-height: $lh-set-first;
+    font-family: $font-title;
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__link:active {
+    @include interactive-style;
+  }
+
+  @media ($tablet) {
+    padding: 45px 15px;
+    top: 101px;
+
+    &__item {
+      margin: 17.5px 0;
+    }
+  }
+
+  @media ($desktop) {
+    position: static;
+    background-color: transparent;
+    padding: 15px 15px;
+    display: flex;
+    flex-grow: 1;
+
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      margin: 4px 17.5px;
+      font-size: $fs-regular;
+      font-weight: $fw-regular;
+      line-height: $lh-set-second;
+    }
+  }
+}

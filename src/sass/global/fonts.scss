@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+
+  src: local("Raleway"),
+    url("../../fonts/raleway.woff2") format("woff2"),
+    url("../../fonts/raleway.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+
+  src: local("Raleway"),
+    url("../../fonts/raleway-500.woff2") format("woff2"),
+    url("../../fonts/raleway-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: "M-plus";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+
+  src: local("Mplus1p-Regular"),
+    url("../../fonts/m-plus-1p.woff2") format("woff2"),
+    url("../../fonts/m-plus-1p.woff") format("woff");
+}
+
+@font-face {
+  font-family: "M-plus";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+
+  src: local("Mplus1p-Regular"),
+    url("../../fonts/m-plus-1p-500.woff2") format("woff2"),
+    url("../../fonts/m-plus-1p-500.woff") format("woff");
+}

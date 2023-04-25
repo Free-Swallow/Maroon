@@ -1,0 +1,73 @@
+.small-card {
+  width: 40vw;
+  min-width: 130px;
+  max-width: 450px;
+
+  &__image {
+    background-color: $bc-image;
+    height: calc((50vw - 30px) / (130 / 170));
+    width: 100%;
+    min-width: 130px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__svg {
+    width: 23px;
+    height: 10px;
+  }
+
+  &__link {
+    font-size: $fs-little;
+    line-height: $lh-set-third;
+    font-weight: $fw-medium;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__footer {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__footer:hover,
+  &__footer:active {
+    cursor: pointer;
+  }
+
+  @media ($tablet) {
+    min-width: 246px;
+    width: 29vw;
+
+    &__image {
+      height: 42vw;
+      min-width: 245px;
+    }
+
+    &__link {
+      font-size: $fs-regular;
+      line-height: $lh-set-seventh;
+    }
+
+    &__svg {
+      width: 26px;
+      height: 12px;
+    }
+  }
+
+  @media ($desktop) {
+    width: 330px;
+
+    &__image {
+      height: auto;
+    }
+  }
+}
+
+.small-card:hover,
+.small-card:focus,
+.small-card:active {
+  @include interactive-style;
+}
