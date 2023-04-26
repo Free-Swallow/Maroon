@@ -1,9 +1,9 @@
-- const bestsellersList = [{img: 'img/medium.jpg', altText: 'Белый крем в стеклянной баночке', name: 'High', description: 'Крем для лица'}]
+- const bestsellersList = [{img: 'img/mediumX3.jpg', altText: 'Белый крем в стеклянной баночке', name: 'High', description: 'Крем для лица'}]
 
 mixin bestsellers()
   section.bestsellers
     h2.bestsellers__title Бестселлеры
-    p.bestsellers__descrtiption
+    p.bestsellers__description
       | Легендарные продукты,
       | завоевавшие любовь
       | наших клиентов
@@ -12,4 +12,4 @@ mixin bestsellers()
         each item in bestsellersList
           li.bestsellers__item
             +mediumCard(item)
-      +buttonLink('#', 'Смотреть всё')
+    +buttonLink('#', 'Смотреть всё')

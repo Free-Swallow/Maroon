@@ -1,3 +1,58 @@
 .bestsellers {
   @include flex-col;
+  padding: 80px 0 80px;
+  max-width: 1200px;
+
+  &__title {
+    font-family: $font-title;
+    font-size: $fs-large;
+    line-height: $lh-set-first;
+    font-weight: $fw-medium;
+    margin: 0 15px 10px;
+  }
+
+  &__description {
+    margin: 10px 0;
+    padding: 0 50px;
+    font-size: $fs-regular;
+    line-height: $lh-set-seventh;
+    text-align: center;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 40px;
+  }
+
+  @media ($tablet) {
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 80px 0 80px 45px;
+    max-height: 600px;
+
+    &__title {
+      max-width: 214px;
+      font-size: $fs-large-plus;
+      line-height: $lh-set-ninth;
+      margin: 50px 0 15px;
+    }
+
+    &__description {
+      max-width: 214px;
+      margin: 0 0 40px;
+      font-size: $fs-regular-plus;
+      line-height: $lh-set-fifth;
+      padding: 0;
+      text-align: left;
+    }
+
+    &__slider {
+      order: 1;
+    }
+  }
+
+  @media ($desktop) {
+    margin: 0 auto;
+  }
 }

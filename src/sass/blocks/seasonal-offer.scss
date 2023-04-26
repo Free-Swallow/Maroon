@@ -1,3 +1,60 @@
 .seasonal-offer {
-  @include flex-col;
+  position: relative;
+  background-image: url("../img/seasonal-offer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &__wrapper {
+    @include flex-col;
+  }
+
+  &__title {
+    width: 255px;
+    padding-top: 276px;
+    font-family: $font-title;
+    font-size: $fs-large;
+    font-weight: $fw-medium;
+    line-height: $lh-set-first;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__description {
+    width: 255px;
+    text-align: center;
+    font-size: $fs-regular;
+    line-height: $lh-set-seventh;
+    padding-bottom: 10px;
+  }
+
+  &__button {
+    margin-bottom: 60px;
+  }
+
+  @media ($tablet) {
+    display: flex;
+    justify-content: end;
+    background-image: url("../img/seasonal-offer-tablet.jpg");
+
+    &__wrapper {
+      margin: 0 35px 0;
+      align-items: start;
+    }
+
+    &__title {
+      width: 280px;
+      margin: 90px 0 20px;
+      padding: 0;
+      text-align: left;
+      font-size: $fs-large-plus;
+      line-height: $lh-set-first;
+    }
+
+    &__description {
+      width: 290px;
+      text-align: left;
+      margin: 0;
+    }
+  }
 }
