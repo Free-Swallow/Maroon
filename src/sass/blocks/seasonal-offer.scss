@@ -1,6 +1,7 @@
 .seasonal-offer {
   position: relative;
   background-image: url("../img/seasonal-offer.jpg");
+  background-color: $background;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -55,6 +56,19 @@
       width: 290px;
       text-align: left;
       margin: 0;
+      padding: 0 0 40px;
+    }
+
+    &__button {
+      margin-bottom: 80px;
+    }
+  }
+
+  @media ($desktop) {
+    background-image: url("../img/seasonal-offer-desktop.jpg");
+
+    &__wrapper {
+      margin: 0 180px 0;
     }
   }
 }

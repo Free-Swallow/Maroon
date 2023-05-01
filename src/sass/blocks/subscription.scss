@@ -1,3 +1,91 @@
 .subscription {
   @include flex-col;
+
+  padding-top: 70px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  &__description-wrapper {
+    max-width: 400px;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    font-family: $font-title;
+    font-size: $fs-large;
+    font-weight: $fw-medium;
+    line-height: $lh-set-first;
+    padding: 0 15px;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: $fs-regular;
+    line-height: $lh-set-seventh;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 20px;
+  }
+
+  &__collage {
+    max-width: 460px;
+    background-color: $background;
+  }
+
+  &__collage--desktop {
+    display: none;
+  }
+
+  @media ($tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: left;
+
+    &__description-wrapper {
+      max-width: none;
+      width: 276px;
+      padding-bottom: 40px;
+      padding-left: 0;
+    }
+
+    &__title {
+      padding: 0;
+      width: 276px;
+      font-size: $fs-large-plus;
+      line-height: $lh-set-ninth;
+    }
+
+    &__description {
+      padding: 0 0 20px;
+      font-size: $fs-regular-plus;
+      line-height: $lh-set-fifth;
+    }
+
+    &__collage {
+      max-width: none;
+      order: -1;
+      width: 354px;
+    }
+  }
+
+  @media ($desktop) {
+    justify-content: space-between;
+
+    &__description-wrapper,
+    &__title,
+    &__description {
+      width: 381px;
+    }
+
+    &__collage--cube {
+      display: none;
+    }
+
+    &__collage--desktop {
+      width: auto;
+      display: inline;
+    }
+  }
 }

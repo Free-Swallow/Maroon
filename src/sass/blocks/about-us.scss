@@ -1,5 +1,48 @@
 .about-us {
+  background-image: url("../img/about-us-cover.jpg");
+  background-color: $background;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 60px 40px;
+
+  &__description {
+    font-family: $font-title;
+    font-size: $fs-medium;
+    font-weight: $fw-medium;
+    line-height: $lh-set-fifth + 2;
+    text-align: center;
+    padding: 0 5px 15px;
+    margin: 0;
+    max-width: 250px;
+    display: inline-block;
+  }
+
+  @media ($tablet) {
+    background-image: url("../img/about-us-cover-tablet.jpg");
+    padding: 100px 58px;
+
+    &__description {
+      font-size: $fs-large-plus;
+      line-height: $lh-set-ninth;
+      max-width: 700px;
+      padding: 0 0 40px;
+    }
+  }
+
+  @media ($desktop) {
+    background-image: url("../img/about-us-cover-desktop.jpg");
+    padding: 120px 58px;
+
+    &__description {
+      font-size: $fs-large-plus;
+      line-height: $lh-set-ninth;
+      max-width: none;
+      width: 761px;
+      padding: 0 0 50px;
+    }
+  }
 }

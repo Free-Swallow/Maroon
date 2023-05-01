@@ -1,9 +1,11 @@
 mixin subscription()
-  section.subscription
-    h2.subscription__title Присоединяйтесь к нам
-    p.subscription__description
-      | Подпишитесь на наш аккаунт
-      | @marooncare и узнавайте
-      | о новиках и акциях первыми
-    +buttonLink('#', 'Подписаться')
-    img.subscription__collage(src="img/collage.jpg" alt="")
+  section.subscription.wrapper
+    div.subscription__description-wrapper
+      h2.subscription__title Присоединяйтесь к нам
+      p.subscription__description
+        | Подпишитесь на наш аккаунт
+        | @marooncare и узнавайте
+        | о новиках и акциях первыми
+      +buttonLink('#', 'Подписаться', 'subscription__button')
+    img.subscription__collage.subscription__collage--cube(src="img/collage.jpg" alt="")
+    img.subscription__collage.subscription__collage--desktop(src="img/collage-desktop.jpg" width=700 height=466 alt="")

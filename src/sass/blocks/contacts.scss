@@ -1,3 +1,17 @@
 .contacts {
   @include flex-col;
+
+  &__wrapper {
+    padding: 50px 30px;
+    background-color: $background;
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    font-family: $font-title;
+    font-size: $fs-large;
+    font-weight: $fw-medium;
+    line-height: $lh-set-first;
+  }
 }
