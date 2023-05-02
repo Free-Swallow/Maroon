@@ -1,6 +1,8 @@
-mixin footer()
+mixin footer(page)
   footer.footer
-    +logo
-    +footerNav
-    +socNet
-    +copyright
+    div.footer__wrapper.wrapper
+      +logo(page, 'footer__logo')
+      +footerNav('footer__nav')
+      +socNet
+    div.footer__copyright-wrapper
+      +copyright('footer__copyright wrapper')

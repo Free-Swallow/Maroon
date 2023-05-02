@@ -1,0 +1,7 @@
+.main {
+  padding-top: 85px;
+
+  @media ($tablet) {
+    padding-top: 140px;
+  }
+}

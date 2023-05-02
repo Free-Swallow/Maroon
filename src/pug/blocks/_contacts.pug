@@ -1,5 +1,5 @@
-mixin contacts()
-  section.contacts.wrapper
+mixin contacts(classes)
+  section.contacts.wrapper(class=classes)
     div.contacts__wrapper
       h2.contacts__title Контакты
       address.contacts__address
@@ -10,10 +10,9 @@ mixin contacts()
             | ул. Большая Конюшенная, 19
           dt.contacts-list__name Телефон
           dd.contacts-list__description
-            a(href="tel:+89238889060") +7 (923) 888-90-60
+            a.contacts-list__link(href="tel:+89238889060") +7 (923) 888-90-60
           dt.contacts-list__name E-mail
           dd.contacts-list__description
-            a(href="mailto:info@maroon.ru") info@maroon.ru
+            a.contacts-list__link(href="mailto:info@maroon.ru") info@maroon.ru
       +socNet
     div.contacts__map
-      img(src="img/map.jpg" width=290 height=281 alt="Мы на карте")

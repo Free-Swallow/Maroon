@@ -1,8 +1,12 @@
 .contacts {
   @include flex-col;
 
+  position: relative;
+  margin-bottom: 80px;
+
   &__wrapper {
-    padding: 50px 30px;
+    width: 100%;
+    padding: 50px 30px 30px;
     background-color: $background;
   }
 
@@ -13,5 +17,64 @@
     font-size: $fs-large;
     font-weight: $fw-medium;
     line-height: $lh-set-first;
+  }
+
+  &__address {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__map {
+    background-color: $copyright;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 281px;
+    width: 100%;
+  }
+
+  @media ($tablet) {
+    margin-bottom: 120px;
+
+    &__wrapper {
+      padding: 60px;
+    }
+
+    &__title {
+      width: 256px;
+      font-size: $fs-large-plus;
+      line-height: $lh-set-ninth;
+    }
+
+    &__address {
+      width: 256px;
+    }
+
+    &__map {
+      right: 0;
+      width: 50vw;
+      height: 374px;
+      position: absolute;
+      top: 60px;
+    }
+  }
+
+  @media ($desktop) {
+    margin-bottom: 140px;
+    align-items: start;
+
+    &__wrapper {
+      padding: 80px;
+      width: 670px;
+    }
+
+    &__map {
+      right: 0;
+      width: 670px;
+      height: 422px;
+      position: absolute;
+      top: 80px;
+    }
   }
 }

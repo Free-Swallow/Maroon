@@ -28,7 +28,6 @@
   }
 
   &__collage {
-    max-width: 460px;
     background-color: $background;
   }
 
@@ -64,7 +63,6 @@
     }
 
     &__collage {
-      max-width: none;
       order: -1;
       width: 354px;
     }

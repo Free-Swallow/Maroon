@@ -1,0 +1,17 @@
+.copyright {
+  &__description {
+    font-size: $fs-little;
+    line-height: $lh-set-third;
+    color: $copyright;
+  }
+
+  @media ($tablet) {
+    display: flex;
+    justify-content: space-between;
+
+    &__description {
+      margin: 0;
+      padding: 10px 0;
+    }
+  }
+}

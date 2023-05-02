@@ -1,6 +1,4 @@
 .logo {
-  @include flex-col;
-
   color: $main-dark;
 
   &__image {

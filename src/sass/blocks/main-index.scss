@@ -1,7 +1,15 @@
-.main-index__preview {
-  padding: 85px 0 50px;
+.main-index {
+  padding-top: 0;
+
+  &__preview {
+    padding: 85px 0 50px;
+  }
 
   @media ($tablet) {
-    padding-top: 140px;
+    padding-top: 0;
+
+    &__preview {
+      padding-top: 140px;
+    }
   }
 }

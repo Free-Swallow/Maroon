@@ -1,0 +1,40 @@
+.footerNav {
+  width: 170px;
+  list-style: none;
+  padding: 20px 0 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 15px;
+
+  &__item {
+    font-size: $fs-small;
+    line-height: $lh-set-seventh - 1;
+  }
+
+  &__link {
+    color: $main-dark;
+  }
+
+  &__item:hover,
+  &__item:focus,
+  &__item:active {
+    @include interactive-style;
+  }
+
+  @media ($tablet) {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 0 30px;
+
+    &__item {
+      padding: 10px 0;
+      font-size: $fs-regular;
+      line-height: $lh-set-second;
+    }
+  }
+}
