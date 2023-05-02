@@ -1,0 +1,42 @@
+.contacts-list {
+  width: 100%;
+  font-size: $fs-regular;
+  line-height: $lh-set-seventh;
+  font-style: normal;
+
+  &__name {
+    font-weight: $fw-medium;
+    padding-bottom: 5px;
+    padding-top: 20px;
+  }
+
+  &__description {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    color: $main-dark;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__link:active {
+    @include interactive-style;
+  }
+
+  @media ($tablet) {
+    padding: 0;
+    margin: 0;
+    font-size: $fs-regular-plus;
+    line-height: $lh-set-fifth;
+  }
+
+  @media ($desktop) {
+    padding-top: 20px;
+
+    &__name {
+      padding-top: 25px;
+    }
+  }
+}

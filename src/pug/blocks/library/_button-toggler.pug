@@ -1,0 +1,6 @@
+mixin toggler(classes)
+  button.toggler.toggler--close(type="button" class=classes aria-label="Переключатель главного меню")
+    svg.toggler__image.toggler__image--close
+      use(xlink:href="img/sprite.svg#burger")
+    svg.toggler__image.toggler__image--open
+      use(xlink:href="img/sprite.svg#cross-closure")

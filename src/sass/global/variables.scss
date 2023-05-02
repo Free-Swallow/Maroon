@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+//  Fonts
+
+$font-regular: "M-plus", "Arial", sans-serif;
+$font-title: "Raleway ", "Arial", sans-serif;
+
+//  Fonts-weight
+
+$fw-regular: 400;
+$fw-medium: 500;
+
+//  Fonts-size
+
+$fs-little: 12px;
+$fs-little-plus: 13px;
+$fs-small: 14px;
+$fs-regular: 16px;
+$fs-regular-plus: 18px;
+$fs-medium: 22px;
+$fs-large: 28px;
+$fs-large-plus: 32px;
+$fs-big: 42px;
+$fs-great: 54px;
+$fs-great-plus: 58px;
+
+//  Line height
+
+$lh-set-first: 36.4px;
+$lh-set-second: 23.76px;
+$lh-set-third: 16.8px;
+$lh-set-fourth: 63.4px;
+$lh-set-fifth: 26.1px;
+$lh-set-sixth: 68.09px;
+$lh-set-seventh: 22.4px;
+$lh-set-eighth: 18.85px;
+$lh-set-ninth: 41.6px;
+
+//  Color
+
+$dark: #000000;
+$main-dark: #122947;
+$button-border: #B3BAC1;
+$header-border: #DBDCE0;
+$border-color: #D1D1D1;
+$background: #F4F1ED;
+$bc-preview: #F9F7F6;
+$bc-navigation: #F8F8F6;
+$bc-header: #ffffff;
+$bc-image: #ede7e1;
+$description-color: #9A9DA0;
+$copyright: #959595;
+
+
+$opacity-interaction: 0.5;
+
+//  Animation
+
+$animation-time: 0.2s;
+
+//  Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1199px;
+
+$tablet: "min-width: #{$tablet-width}";
+$desktop: "min-width: #{$desktop-width}";

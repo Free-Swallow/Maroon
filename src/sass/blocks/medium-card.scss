@@ -1,0 +1,44 @@
+.medium-card {
+  width: 220px;
+  position: relative;
+
+  &__description-block {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  &__name-product {
+    padding: 0;
+    margin: 0;
+    font-family: $font-title;
+    font-size: $fs-regular;
+    line-height: $lh-set-second;
+    font-weight: $fw-medium;
+  }
+
+  &__description {
+    font-size: $fs-little-plus;
+    line-height: $lh-set-eighth;
+    color: $description-color;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    font-size: $fs-little-plus;
+    line-height: $lh-set-eighth;
+    color: inherit;
+    border-bottom: 1px solid $main-dark;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__link:active {
+    @include interactive-style;
+  }
+}

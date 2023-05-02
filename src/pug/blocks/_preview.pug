@@ -1,10 +1,16 @@
-- const previewCardsData = [{img: 'img/Rectangle5.jpg', altText: 'Фото товара', title: 'Уход для лица'}, {img: 'img/Rectangle5.jpg', altText: 'Фото товара', title: 'Уход для тела'}]
+- const previewCardsData = [{img: 'img/small-card1.jpg', altText: 'Фото товара', title: 'Уход для лица'}, {img: 'img/small-card2.jpg', altText: 'Фото товара', title: 'Уход для тела'}]
 
-mixin preview()
-  section.preview
-    h1.preview__title  Maroon Натуральная косметика для бережного ухода за кожей
-    +buttonLink('#', 'Подробнее')
-    ul.preview__card-list
-      each item in previewCardsData
-        li.preview__card
-          +smallCard(item)
+mixin preview(classes)
+  section.preview(class=classes)
+    div.wrapper.preview__wrapper
+      div.preview__title-wrapper
+        h1.preview__title
+          span.preview__title-header Maroon
+          | Натуральная косметика
+          br
+          | для бережного ухода за кожей
+        +buttonLink('#', 'Подробнее', 'preview__button')
+      ul.preview__card-list
+        each item in previewCardsData
+          li.preview__item
+            +smallCard(item)

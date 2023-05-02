@@ -1,4 +1,8 @@
 mixin smallCard(card, classes)
   article.small-card(class=classes)
-    img.small-card__image(src=card.img alt=card.altText width=130 height=170)
-    a.small-card__link= card.title
+    a.small-card__link
+      img.small-card__image(src=card.img alt=card.altText width=130 height=170)
+      div.small-card__footer
+        span=card.title
+        svg.small-card__svg
+          use(xlink:href="img/sprite.svg#next-arrow")

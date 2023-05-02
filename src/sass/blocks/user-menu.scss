@@ -1,0 +1,39 @@
+.user-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: end;
+
+  &__item {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &__image {
+    max-height: 16px;
+    max-width: 16px;
+    color: $main-dark;
+  }
+
+  @media ($tablet) {
+    &__image {
+      max-height: 21px;
+      max-width: 21px;
+    }
+  }
+
+  @media ($desktop) {
+    order: 1;
+
+    &__item {
+      margin: 0 15px;
+    }
+  }
+}
+
+.user-menu__item:hover,
+.user-menu__item:focus,
+.user-menu__item:active .user-menu__image {
+  @include interactive-style;
+}

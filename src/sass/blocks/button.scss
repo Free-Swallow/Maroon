@@ -1,0 +1,29 @@
+.button {
+  min-height: 40px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid $button-border;
+  border-radius: 2px;
+  font-size: $fs-small;
+  font-family: "M-plus", "Arial", sans-serif;
+  font-weight: $fw-medium;
+  line-height: 20px;
+  color: $main-dark;
+  text-decoration: none;
+
+  @media ($tablet) {
+    font-size: $fs-regular;
+    line-height: $lh-set-seventh;
+  }
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  color: $bc-header;
+  background-color: $main-dark;
+  border-color: none;
+  transition: all 500ms ease;
+}

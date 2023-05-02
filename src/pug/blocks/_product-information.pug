@@ -1,7 +1,11 @@
 mixin productInformation()
-  section.product-information
+  section.product-information.wrapper
     div.product-information__wrapper
       h2.product-information__title Индивидуальный уход
+      p.product-information__description.product-information__description-full
+        | Не всегда очевидно, какие элементы и минералы необходимы коже,
+        | а многочисленные эксперименты
+        | с разными средствами только ухудшают ее качество.
       p.product-information__description
         | Заполните анкету,
         | и мы подберем уход, подходящий
@@ -10,4 +14,6 @@ mixin productInformation()
         | жительства и другие
         | факторы.
       +buttonLink('#', 'Заполнить анкету')
-    img(src='img/p-f.jpg' width=250 height=252 alt='Наша продукция')
+      img.product-information__image.product-information__image--mobile(src='img/p-f.jpg' width=250 height=252 alt='Наша продукция')
+      img.product-information__image.product-information__image--tablet(src='img/p-f-tablet.jpg' width=398 height=403 alt='Наша продукция')
+      img.product-information__image.product-information__image--desktop(src='img/p-f-desktop.jpg' width=670 height=451 alt='Наша продукция')

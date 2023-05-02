@@ -1,0 +1,130 @@
+.product-information {
+  @include flex-col;
+  overflow-x: hidden;
+
+  &__wrapper {
+    max-width: 450px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background;
+    margin-top: 80px;
+    margin-bottom: 272px;
+    padding: 60px 31px 110px;
+    text-align: center;
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0 0 20px;
+    font-family: $font-title;
+    font-weight: $fw-medium;
+    font-size: $fs-large;
+    line-height: $lh-set-first;
+  }
+
+  &__description {
+    font-size: $fs-regular;
+    line-height: $lh-set-seventh;
+    padding-bottom: 30px;
+    margin: 0;
+  }
+
+  &__description-full {
+    display: none;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: -190px;
+  }
+
+  &__image--tablet {
+    display: none;
+  }
+
+  &__image--desktop {
+    display: none;
+  }
+
+  @media ($tablet) {
+    &__wrapper {
+      margin-top: 120px;
+      margin-bottom: 120px;
+      min-height: 503px;
+      max-width: none;
+      width: 100%;
+      align-items: start;
+      padding: 60px 60px;
+    }
+
+    &__title {
+      font-size: $fs-large-plus;
+      line-height: $lh-set-ninth;
+    }
+
+    &__description {
+      width: 330px;
+      font-size: $fs-regular-plus;
+      line-height: $lh-set-fifth;
+      text-align: left;
+    }
+
+    &__description-full {
+      display: block;
+      padding-bottom: 10px;
+    }
+
+    &__image {
+      bottom: 0;
+      top: 50px;
+      right: -100px;
+    }
+
+    &__image--mobile {
+      display: none;
+    }
+
+    &__image--tablet {
+      display: inline;
+      object-fit: contain;
+    }
+  }
+
+  @media ($desktop) {
+    align-items: start;
+
+    &__wrapper {
+      margin-top: 140px;
+      margin-bottom: 140px;
+      width: 650px;
+      padding: 100px;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__description {
+      padding-bottom: 45px;
+    }
+
+    &__description-full {
+      padding-bottom: 15px;
+    }
+
+    &__image {
+      right: -500px;
+      top: 66px;
+    }
+
+    &__image--tablet {
+      display: none;
+    }
+
+    &__image--desktop {
+      display: inline;
+    }
+  }
+}

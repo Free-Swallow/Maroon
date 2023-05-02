@@ -1,0 +1,41 @@
+.footer {
+  background-color: $background;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    padding-top: 50px;
+  }
+
+  &__logo {
+    width: fit-content;
+  }
+
+  &__copyright-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid $border-color;
+  }
+
+  @media ($tablet) {
+    &__wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+
+    &__nav {
+      flex-grow: 1;
+    }
+  }
+
+  @media ($desktop) {
+    &__nav {
+      margin-left: 50px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+//  Эффект при взаимодеиствии с интерактивными элементами
+@mixin interactive-style() {
+  opacity: $opacity-interaction;
+  transition: $animation-time;
+}
+
+//  Вертикальная flex сетка
+@mixin flex-col() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

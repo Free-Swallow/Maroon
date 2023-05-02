@@ -5,17 +5,13 @@ block variables
     const page = 'Layout'
 
 doctype html
-html(lang="ru" style={width: '320px', margin: '0 auto'})
+html.page(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width-device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     include _head
     title= page
-  body
+  body.page-body
     block content
     include _scripts
-
-// TODO Разметить крупные смысловые блоки
-// TODO Рефакторинг элемента pagetitle - Сделать универсальным для всех title, принимать класс vissualy-hidden
-// TODO Предложения сделать как "Вы недавно смотрели"
