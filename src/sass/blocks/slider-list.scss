@@ -1,0 +1,41 @@
+.slider-list {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__toggler {
+    width: 12px;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    color: $main-dark;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__toggler--close {
+    background-image: url("../img/plus.svg");
+  }
+
+  &__toggler--open {
+    background-image: url("../img/minus.svg");
+  }
+
+  &__toggler:hover,
+  &__toggler:focus,
+  &__toggler:active {
+    @include interactive-style;
+  }
+
+  &__toggler-icon--close {
+    width: 12px;
+    height: 12px;
+  }
+
+  &__header--close &__list {
+    display: none;
+  }
+}

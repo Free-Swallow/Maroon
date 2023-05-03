@@ -1,7 +1,7 @@
 - const bestsellersList = [{img: 'img/mediumX3.jpg', altText: 'Белый крем в стеклянной баночке', name: 'High', description: 'Крем для лица'}]
 
-mixin bestsellers()
-  section.bestsellers
+mixin bestsellers(classes)
+  section.bestsellers(class=classes)
     h2.bestsellers__title Бестселлеры
     p.bestsellers__description
       | Легендарные продукты,

@@ -1,5 +1,5 @@
-mixin filterList(list)
-  ul.filter-list
+mixin filterList(list, classes)
+  ul.filter-list(class=classes)
     each item in list
       li.filter-list__item
         label.filter-list__label

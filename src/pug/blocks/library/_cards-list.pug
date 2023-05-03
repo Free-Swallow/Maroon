@@ -1,7 +1,7 @@
 - const cardList = [{img: 'img/medium.jpg', altText: 'Белый крем в стеклянной баночке', name: 'High', description: 'Крем для лица', price: '790P', volume: '50ml'}, {img: 'img/rose.jpg', altText: 'Белый крем в стеклянной баночке', name: 'Rose', description: 'Крем для лица', price: '990P', volume: '50ml'}]
 
-mixin cardsList()
-  section.cards-list
+mixin cardsList(classes)
+  section.cards-list(class=classes)
     ul.cards-list__list
       each item in cardList
         li.cards-list__item

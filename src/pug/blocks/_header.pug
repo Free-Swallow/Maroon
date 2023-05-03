@@ -20,7 +20,7 @@
     ]
 
 mixin header(page, classes)
-  header.header.header--transparent(class=classes)
+  header.header(class=classes)
     +toggler('header__toggler')
     +logo(page, 'header__logo')
     +userMenu(menuData)

@@ -4,6 +4,35 @@
   transition: $animation-time;
 }
 
+@mixin interactive-style-button() {
+  color: $bc-header;
+  background-color: $main-dark;
+  border-color: transparent;
+  transition: all 500ms ease;
+}
+
+@mixin style-button() {
+  min-height: 40px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid $button-border;
+  border-radius: 2px;
+  font-size: $fs-small;
+  font-family: "M-plus", "Arial", sans-serif;
+  font-weight: $fw-medium;
+  line-height: $lh-set-eighth;
+  color: $main-dark;
+  text-decoration: none;
+  background-color: transparent;
+
+  @media ($tablet) {
+    font-size: $fs-regular;
+    line-height: $lh-set-seventh;
+  }
+}
+
 //  Вертикальная flex сетка
 @mixin flex-col() {
   display: flex;

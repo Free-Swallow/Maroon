@@ -1,7 +1,7 @@
 mixin sliderList(data)
-  div.slider-list
-    each item in data
+  each item, index in data
+    div.slider-list(data-id=`slider-${index}`)
       div.slider-list__header
         p.slider-list__title= item.name
-        button.slider-list__toggler(type="button") Кнопка открытия и закрытия меню
-        +filterList(item.options)
+        button.slider-list__toggler.slider-list__toggler--close(type="button" aria-label="Кнопка открытия и закрытия меню" data-button-id=index)
+      +filterList(item.options, 'slider-list__list')
