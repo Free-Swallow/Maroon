@@ -36,9 +36,11 @@ function toggleFilter() {
 }
 
 function toggleSliderList(evt) {
-  console.log(evt.target);
+  const accardion = document.querySelector(`#${evt.target.dataset.uniqId}-${evt.target.dataset.buttonId}`);
   if (evt.target.nodeName === 'BUTTON') {
-    console.log(evt.target);
+    accardion.classList.toggle('slider-list--close');
+    evt.target.classList.toggle('slider-list__toggler--close');
+    evt.target.classList.toggle('slider-list__toggler--open');
   }
 }
 

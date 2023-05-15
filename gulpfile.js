@@ -57,8 +57,6 @@ export const puglint = () => {
 };
 
 export const lintBemMarkup = () => {
-  markup();
-
   return gulp.src('build/*.html')
     .pipe(bemlinter());
 };

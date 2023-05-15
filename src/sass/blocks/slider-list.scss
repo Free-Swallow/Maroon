@@ -3,6 +3,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1.4px solid $header-border;
+    padding: 15px 0;
+  }
+
+  &__title {
+    font-weight: $fw-medium;
+    font-size: $fs-regular-plus;
+    line-height: $lh-set-fifth;
+    padding: 0;
+    margin: 0;
   }
 
   &__toggler {
@@ -37,5 +47,24 @@
 
   &__header--close &__list {
     display: none;
+  }
+
+  &--close &__list {
+    display: none;
+  }
+
+  @media ($tablet) {
+    &--close &__list {
+      display: block;
+    }
+
+    &__header {
+      border-bottom: none;
+      padding: 0;
+    }
+
+    &__toggler {
+      display: none;
+    }
   }
 }
