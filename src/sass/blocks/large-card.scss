@@ -1,0 +1,95 @@
+.large-card {
+  position: relative;
+  width: 290px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+
+  &__link {
+    display: block;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__link:active {
+    @include interactive-style;
+  }
+
+  &__img {
+    background-color: $bc-image;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__img--tablet,
+  &__img--desktop {
+    display: none;
+  }
+
+  &__information {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__name {
+    font-family: $font-title;
+    font-size: $fs-regular;
+    font-weight: $fw-medium;
+    line-height: $lh-set-second;
+    color: $main-dark;
+  }
+
+  &__price,
+  &__description,
+  &__valume {
+    font-size: $fs-little-plus;
+    line-height: $lh-set-eighth;
+  }
+
+  &__price,
+  &__valume {
+    text-align: right;
+  }
+
+  &__price {
+    font-weight: $fw-medium;
+    color: $main-dark;
+  }
+
+  &__description,
+  &__valume {
+    color: $description-color;
+  }
+
+  @media ($tablet) {
+    width: 324px;
+    height: 350px;
+
+    &__img--mobile {
+      display: none;
+    }
+
+    &__img--tablet {
+      display: block;
+    }
+  }
+
+  @media ($desktop) {
+    width: 270px;
+    height: 350px;
+
+    &__img--tablet {
+      display: none;
+    }
+
+    &__img--desktop {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.control-pages {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__page-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: $fw-medium;
+    font-size: $fs-small;
+    line-height: $lh-set-eighth;
+  }
+
+  &__line {
+    display: inline-block;
+    height: 1.2px;
+    width: 30px;
+    background-color: $main-dark;
+  }
+
+  &__last-page--disabled {
+    color: $description-color;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+  }
+
+  &__button--disabled {
+    color: $description-color;
+  }
+
+  &__button:hover,
+  &__button:focus,
+  &__button:active {
+    @include interactive-style;
+  }
+
+  @media ($tablet) {
+    &__page-count {
+      position: relative;
+      left: auto;
+      right: auto;
+    }
+  }
+}

@@ -1,11 +1,13 @@
-mixin controlPages()
-  div.control-pages
-    div.page-count
-      span.page-count__current-page 1
-      span.page-count__line -
-      span.page-count__last-page 3
-    div.page-control
-      button.page-control__previous(type="button")
-        img(src="img/svg/previous-arrow.svg" width=24 height=11 alt="Предыдущая страница")
-      button.page-control__next(type="button")
-        img(src="img/svg/next-arrow.svg" width=24 height=11 alt="Следующая страница")
+mixin controlPages(classes)
+  div.control-pages(class=classes)
+    div.control-pages__page-count
+      span.control-pages__current-page 1
+      span.control-pages__line
+      span.control-pages__last-page.control-pages__last-page--disabled 3
+    div.control-pages__buttons
+      button.control-pages__button(type="button" aria-label="Предыдущая страница")
+        svg.control-pages__icon(width=24 height=11)
+          use(Xlink:href="img/sprite.svg#previous-arrow")
+      button.control-pages__button.control-pages__button--disabled(type="button" aria-label="Следующя страница")
+        svg.control-pages__icon(width=24 height=11)
+          use(Xlink:href="img/sprite.svg#next-arrow")

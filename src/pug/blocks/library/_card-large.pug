@@ -1,8 +1,11 @@
 mixin largeCard(card)
   article.large-card
-    img.large-card__img(src=card.img alt=card.altText width=290 height=290)
-    dl.large-card__information
-      dt.large-card__name= card.name
-      dd.large-card__price= card.price
-      dt.large-card__description= card.description
-      dd.large-card__valume= card.volume
+    a.large-card__link(href='#')
+      img.large-card__img.large-card__img--mobile(src=`${card.img}-mobile.jpg` alt=card.altText width=290 height=290)
+      img.large-card__img.large-card__img--tablet(src=`${card.img}-tablet.jpg` alt=card.altText width=324 height=350)
+      img.large-card__img.large-card__img--desktop(src=`${card.img}-desktop.jpg` alt=card.altText width=270 height=350)
+      dl.large-card__information
+        dt.large-card__name= card.name
+        dd.large-card__price= card.price
+        dt.large-card__description= card.description
+        dd.large-card__valume= card.volume
