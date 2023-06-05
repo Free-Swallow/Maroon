@@ -1,10 +1,6 @@
 .main {
   padding-top: 77px;
 
-  &--catalog {
-    background-color: $page-background;
-  }
-
   @media ($tablet) {
     padding-top: 102px;
   }

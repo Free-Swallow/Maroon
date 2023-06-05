@@ -1,16 +1,27 @@
 .control-pages {
-  width: 320px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   &__page-count {
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  &__link {
     font-weight: $fw-medium;
     font-size: $fs-small;
     line-height: $lh-set-eighth;
+    color: $main-dark;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__link:active {
+    @include interactive-style;
   }
 
   &__line {
@@ -20,7 +31,7 @@
     background-color: $main-dark;
   }
 
-  &__last-page--disabled {
+  &__link--disabled {
     color: $description-color;
   }
 
@@ -45,10 +56,27 @@
   }
 
   @media ($tablet) {
-    &__page-count {
-      position: relative;
-      left: auto;
-      right: auto;
+    width: 100%;
+    justify-content: center;
+
+    &__link {
+      font-size: $fs-regular-plus;
+      line-height: $lh-set-fifth;
+    }
+
+    &__line {
+      width: 50px;
+    }
+
+    &__button,
+    &__icon {
+      width: 26px;
+      height: 12px;
+    }
+
+    &__buttons {
+      position: absolute;
+      right: 0;
     }
   }
 }

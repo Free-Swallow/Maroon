@@ -1,7 +1,44 @@
 .short-card-list {
+  @include flex-col;
+
+  &__title {
+    text-align: center;
+    font-family: $font-title;
+    font-weight: $fw-medium;
+    font-size: $fs-large;
+    line-height: $lh-set-eleven;
+    padding-bottom: 20px;
+  }
+
   &__list {
+    @include flex-col;
+
+    gap: 30px;
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  &__controls {
+    padding-top: 35px;
+  }
+
+  @media ($tablet) {
+    &__title {
+      font-size: $fs-large-plus;
+      line-height: $lh-set-ninth;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @media ($desktop) {
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }

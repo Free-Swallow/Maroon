@@ -1,39 +1,39 @@
 -
   const recentlyList = [
     {
-      img: 'img/clean.jpg',
-      altText: 'Разводимый белый порошок',
-      name: 'Clean',
-      description: 'Маска для лица',
-      price: '490Р',
-      volume: '100g'
+      img: 'img/product-2',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Rest',
+      description: 'миндальная пудра',
+      price: '690₽',
+      volume: '20g'
     },
     {
-      img: 'img/lotos.jpg',
-      altText: 'Белый крем',
-      name: 'Lotos',
-      description: 'Маска для лица',
-      price: '890Р',
+      img: 'img/product-3',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Rose',
+      description: 'Крем для лица',
+      price: '990₽',
       volume: '50ml'
     },
     {
-      img: 'img/lavender.jpg',
-      altText: 'Кусковое мыло бело-фиолетового цвета',
-      name: 'Lavender',
-      description: 'Мыло ручной работы',
-      price: '290Р',
-      volume: '50g'
+      img: 'img/product-4',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Milk',
+      description: 'масло для тела',
+      price: '790₽',
+      volume: '150ml'
     },
     {
-      img: 'img/coconut.jpg',
-      altText: 'Белый крем в белой пластиковой баночке',
-      name: 'Coconut',
-      description: 'Масло для тела',
-      price: '990Р',
-      volume: '300g'
+      img: 'img/product-5',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Lavender',
+      description: 'мыло ручной работы',
+      price: '290₽',
+      volume: '50g'
     }
   ]
 
 mixin recentlyViewed(classes)
-  section.recently-viewed(class=classes)
-    +shortCardList(recentlyList, 'Недавно смотрели')
+  section.recently-viewed.wrapper(class=classes)
+    +shortCardList(recentlyList, 'Вы недавно смотрели')

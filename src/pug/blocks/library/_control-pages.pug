@@ -1,9 +1,9 @@
 mixin controlPages(classes)
   div.control-pages(class=classes)
     div.control-pages__page-count
-      span.control-pages__current-page 1
+      a(href="#").control-pages__link 1
       span.control-pages__line
-      span.control-pages__last-page.control-pages__last-page--disabled 3
+      a(href="#").control-pages__link.control-pages__link--disabled 3
     div.control-pages__buttons
       button.control-pages__button(type="button" aria-label="Предыдущая страница")
         svg.control-pages__icon(width=24 height=11)
