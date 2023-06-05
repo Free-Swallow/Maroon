@@ -1,9 +1,91 @@
-- const cardList = [{img: 'img/medium.jpg', altText: 'Белый крем в стеклянной баночке', name: 'High', description: 'Крем для лица', price: '790P', volume: '50ml'}, {img: 'img/rose.jpg', altText: 'Белый крем в стеклянной баночке', name: 'Rose', description: 'Крем для лица', price: '990P', volume: '50ml'}]
+-
+  const cardList = [
+    {
+      img: 'img/product-1',
+      altText: 'Белый крем в стеклянной баночке, для лица',
+      name: 'High',
+      description: 'Крем для лица',
+      price: '790₽',
+      volume: '50ml'
+    },
+    {
+      img: 'img/product-2',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Rest',
+      description: 'миндальная пудра',
+      price: '690₽',
+      volume: '20g'
+    },
+    {
+      img: 'img/product-3',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Rose',
+      description: 'Крем для лица',
+      price: '990₽',
+      volume: '50ml'
+    },
+    {
+      img: 'img/product-4',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Milk',
+      description: 'масло для тела',
+      price: '790₽',
+      volume: '150ml'
+    },
+    {
+      img: 'img/product-5',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Lavender',
+      description: 'мыло ручной работы',
+      price: '290₽',
+      volume: '50g'
+    },
+    {
+      img: 'img/product-1',
+      altText: 'Белый крем в стеклянной баночке, для лица',
+      name: 'High',
+      description: 'Крем для лица',
+      price: '790₽',
+      volume: '50ml'
+    },
+    {
+      img: 'img/product-2',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Rest',
+      description: 'миндальная пудра',
+      price: '690₽',
+      volume: '20g'
+    },
+    {
+      img: 'img/product-3',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Rose',
+      description: 'Крем для лица',
+      price: '990₽',
+      volume: '50ml'
+    },
+    {
+      img: 'img/product-4',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Milk',
+      description: 'масло для тела',
+      price: '790₽',
+      volume: '150ml'
+    },
+    {
+      img: 'img/product-5',
+      altText: 'Белый крем в стеклянной баночке',
+      name: 'Lavender',
+      description: 'мыло ручной работы',
+      price: '290₽',
+      volume: '50g'
+    }
+    ]
 
-mixin cardsList()
-  section.cards-list
+mixin cardsList(classes)
+  section.cards-list.wrapper(class=classes)
     ul.cards-list__list
       each item in cardList
         li.cards-list__item
           +largeCard(item)
-    +controlPages
+    +controlPages('cards-list__controls')

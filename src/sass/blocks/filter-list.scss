@@ -1,0 +1,61 @@
+.filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 26px;
+
+  &__item {
+    padding-top: 20px;
+    position: relative;
+    font-size: $fs-regular;
+    line-height: $lh-set-seventh;
+  }
+
+  &__name {
+    font-size: $fs-regular;
+    line-height: $lh-set-seventh;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__label:hover,
+  &__label:focus,
+  &__label:active {
+    @include interactive-style;
+  }
+
+  &__item:last-child {
+    margin-bottom: 10px;
+  }
+
+  &__input + &__checkbox {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1.3px solid $checkbox-border;
+    border-radius: 50%;
+    left: -26px;
+    top: 3px;
+  }
+
+  &__input:checked + &__checkbox::before {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: $main-dark;
+  }
+
+  &__input:disabled + &__checkbox + &__name {
+    color: $description-color;
+  }
+
+  &__input:disabled + &__checkbox::before {
+    background-color: $description-color;
+  }
+}

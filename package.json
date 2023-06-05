@@ -6,9 +6,9 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"src/sass/**/*.scss\" --fix",
-    "validate": "npm exec html-validate \"build/*.html\"",
+    "validate": "gulp markup && npm exec html-validate \"build/*.html\"",
     "puglint": "gulp puglint",
-    "bemLint": "gulp lintBemMarkup",
+    "bemLint": "gulp markup && gulp lintBemMarkup",
     "lint": "npm run editorconfig && npm run stylelint && npm run puglint && npm run validate && npm run bemLint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",

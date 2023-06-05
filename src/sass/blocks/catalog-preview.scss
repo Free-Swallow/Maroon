@@ -1,0 +1,133 @@
+.catalog-preview {
+  padding-top: 10px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: $font-title;
+    font-weight: $fw-medium;
+    font-size: $fs-large;
+    line-height: $lh-set-tenth;
+  }
+
+  &__toggler--close {
+    @include style-button;
+  }
+
+  &__toggler--open {
+    border: none;
+    background-color: transparent;
+  }
+
+  &__toggler-inner--open-view {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__toggler--close &__toggler-inner--open-view {
+    display: none;
+  }
+
+  &__toggler--open &__toggler-inner--close-view {
+    display: none;
+  }
+
+  &__filter-list--close {
+    display: none;
+  }
+
+  &__toggler--close:hover,
+  &__toggler--close:focus,
+  &__toggler--close:active {
+    @include interactive-style-button;
+  }
+
+  &__toggler-inner--open-view:hover,
+  &__toggler-inner--open-view:focus,
+  &__toggler-inner--open-view:active {
+    @include interactive-style;
+  }
+
+  &__filter-buttons {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__filter-list {
+    position: relative;
+    padding: 0 10px;
+    margin-bottom: 47px;
+  }
+
+  &__filter-list::before {
+    width: 100vw;
+    content: "";
+    height: 10px;
+    position: absolute;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    left: -15px;
+  }
+
+  @media ($tablet) {
+    padding-top: 10px;
+
+    &__title {
+      font-size: $fs-xl;
+      line-height: $lh-set-tenth;
+    }
+
+    &__toggler--close {
+      min-width: 141px;
+    }
+
+    &__toggler-inner--open-view {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__wrapper-list {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      gap: 60px;
+    }
+
+    &__filter-buttons {
+      width: auto;
+      gap: 20px;
+      justify-content: space-evenly;
+    }
+
+    &__filter-list::before {
+      left: -45px;
+    }
+  }
+
+  @media ($desktop) {
+    &__wrapper-list {
+      justify-content: space-evenly;
+    }
+
+    &__filter-list::before {
+      left: -65px;
+    }
+
+    &__filter-buttons {
+      width: 100%;
+      justify-content: end;
+    }
+  }
+}

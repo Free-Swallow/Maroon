@@ -1,0 +1,35 @@
+.cards-list {
+  @include flex-col;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__controls {
+    padding-top: 35px;
+  }
+
+  @media ($tablet) {
+    &__list {
+      width: 678px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+  }
+
+  @media ($desktop) {
+    &__list {
+      width: 1170px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+    }
+  }
+}

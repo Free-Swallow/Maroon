@@ -1,0 +1,70 @@
+.slider-list {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.4px solid $header-border;
+    padding: 15px 0;
+  }
+
+  &__title {
+    font-weight: $fw-medium;
+    font-size: $fs-regular-plus;
+    line-height: $lh-set-fifth;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__toggler {
+    width: 12px;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    color: $main-dark;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__toggler--close {
+    background-image: url("../img/plus.svg");
+  }
+
+  &__toggler--open {
+    background-image: url("../img/minus.svg");
+  }
+
+  &__toggler:hover,
+  &__toggler:focus,
+  &__toggler:active {
+    @include interactive-style;
+  }
+
+  &__toggler-icon--close {
+    width: 12px;
+    height: 12px;
+  }
+
+  &__header--close &__list {
+    display: none;
+  }
+
+  &--close &__list {
+    display: none;
+  }
+
+  @media ($tablet) {
+    &--close &__list {
+      display: block;
+    }
+
+    &__header {
+      border-bottom: none;
+      padding: 0;
+    }
+
+    &__toggler {
+      display: none;
+    }
+  }
+}

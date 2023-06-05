@@ -1,7 +1,11 @@
-mixin filterList(list)
-  ul.filter-list
-    each item in list
+mixin filterList(list, classes)
+  ul.filter-list(class=classes)
+    each item, index in list
       li.filter-list__item
         label.filter-list__label
-          input.filter-list__input(type='checkbox')
+          if (index %2 === 0)
+            input.filter-list__input.visually-hidden(type='checkbox' disabled)
+          else
+            input.filter-list__input.visually-hidden(type='checkbox' checked)
+          span.filter-list__checkbox
           span.filter-list__name= item

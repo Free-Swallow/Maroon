@@ -1,5 +1,5 @@
-mixin footer(page)
-  footer.footer
+mixin footer(page, classes)
+  footer.footer(class=classes)
     div.footer__wrapper.wrapper
       +logo(page, 'footer__logo')
       +footerNav('footer__nav')

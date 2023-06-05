@@ -1,10 +1,17 @@
-- const filterData = [{name: 'Уход для лица', options: ['Крема', 'Сыворотки', 'Маски', 'Пенки', 'Тоники', 'Пудры']}, {name: 'Уход для тела', options: ['Крема', 'Сыворотки', 'Маски', 'Пенки', 'Тоники', 'Пудры']}, {name: 'Тип кожи', options: ['Нормальная', 'Сухая', 'Жирная', 'Комбинированная']}]
+- const filterData = [{name: 'Уход для лица', options: ['Крема', 'Сыворотки', 'Маски', 'Пенки', 'Тоники', 'Пудры', ]}, {name: 'Уход для тела', options: ['Крема', 'Сыворотки', 'Бомбочки для ванны', 'Соль для ванны', 'Маски', 'Пенки', 'Тоники', 'Пудры']}, {name: 'Тип кожи', options: ['Нормальная', 'Сухая', 'Жирная', 'Комбинированная']}]
 
-mixin catalogPreview()
-  section.catalog-preview
+mixin catalogPreview(classes)
+  section.catalog-preview.wrapper(class=classes)
     div.catalog-preview__header
       h1.catalog-preview__title Каталог
-      button(type="button" class="catalog-preview__toggler") Переключатель меню фильтров
-    div.catalog-preview__filter-list
-      form()
-        +sliderList(filterData)
+      button.catalog-preview__toggler.catalog-preview__toggler--close(type="button")
+        span.catalog-preview__toggler.catalog-preview__toggler-inner.catalog-preview__toggler-inner--close-view Фильтр
+        svg.catalog-preview__toggler.catalog-preview__toggler-inner.catalog-preview__toggler-inner--open-view
+          use(xlink:href="img/sprite.svg#cross-closure")
+    div.catalog-preview__filter-list.catalog-preview__filter-list--close
+      form.catalog-preview__form
+        div.catalog-preview__wrapper-list
+          +sliderList(filterData, 'filter')
+        div.catalog-preview__filter-buttons
+          +button('button', 'Применить', 'catalog-preview__button')
+          +button('button', 'Сбросить', 'catalog-preview__button')
