@@ -1,0 +1,8 @@
+mixin radioList(list, classes, type)
+  ul.filter-list(class=classes)
+    each item, index in list
+      li.filter-list__item
+        label.filter-list__label.checkbox
+          input.filter-list__input.checkbox__input.visually-hidden(type='radio' name=type value=item)
+          span.filter-list__checkbox.checkbox__box
+          span.filter-list__name.checkbox__description= item

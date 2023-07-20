@@ -13,6 +13,7 @@
   padding: 0 15px;
   border-bottom: 1px solid $header-border;
   background-color: $bc-header;
+  transition: $animation-time-slow;
 
   &__logo {
     margin-left: 48px;

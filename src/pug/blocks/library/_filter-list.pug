@@ -2,10 +2,10 @@ mixin filterList(list, classes)
   ul.filter-list(class=classes)
     each item, index in list
       li.filter-list__item
-        label.filter-list__label
+        label.filter-list__label.checkbox
           if (index %2 === 0)
-            input.filter-list__input.visually-hidden(type='checkbox' disabled)
+            input.filter-list__input.checkbox__input.visually-hidden(type='checkbox' name=item disabled)
           else
-            input.filter-list__input.visually-hidden(type='checkbox' checked)
-          span.filter-list__checkbox
-          span.filter-list__name= item
+            input.filter-list__input.checkbox__input.visually-hidden(type='checkbox' name=item checked)
+          span.filter-list__checkbox.checkbox__box
+          span.filter-list__name.checkbox__description= item

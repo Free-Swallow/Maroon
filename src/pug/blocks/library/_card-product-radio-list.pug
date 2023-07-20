@@ -1,8 +1,0 @@
-mixin radioList(data, classes, subtitle)
-  div(class=classes)
-    p(class=`${classes}__subtitle`)= subtitle
-    div(class=`${classes}__radio-wrapper`)
-      each item in data
-        label(class=`${classes}__label`)
-          input(type="checkbox" class=`${classes}__input`)
-          span(class=`${classes}__description`)= item

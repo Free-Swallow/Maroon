@@ -2,7 +2,7 @@ mixin userMenu(menuData, classes)
   ul.user-menu(class=classes)
     each item in menuData
       li.user-menu__item
-        a(href="#").user-menu__link
+        a(href="#" title=item.linkAltText).user-menu__link
           span.visually-hidden= item.linkAltText
           svg.user-menu__image
             use(xlink:href=item.src)

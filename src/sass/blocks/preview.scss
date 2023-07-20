@@ -6,6 +6,7 @@
   background-size: cover;
   background-position: top center;
   z-index: -10;
+  transition: $animation-time-slow;
 
   &__wrapper {
     @include flex-col;

@@ -1,9 +1,10 @@
 .slider-list {
+  border-bottom: 1.4px solid $header-border;
+
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1.4px solid $header-border;
     padding: 15px 0;
   }
 
@@ -26,6 +27,13 @@
     background-repeat: no-repeat;
   }
 
+  &__description {
+    padding: 0 0 20px;
+    margin: 0;
+    font-size: $fs-small;
+    line-height: $lh-set-eighth;
+  }
+
   &__toggler--close {
     background-image: url("../img/plus.svg");
   }
@@ -45,25 +53,29 @@
     height: 12px;
   }
 
-  &__header--close &__list {
-    display: none;
-  }
-
   &--close &__list {
     display: none;
   }
 
+  &--close &__description {
+    display: none;
+  }
+
   @media ($tablet) {
-    &--close &__list {
+    &--type-one {
+      border: none;
+    }
+
+    &--type-one &__list {
       display: block;
     }
 
-    &__header {
+    &--type-one &__header {
       border-bottom: none;
       padding: 0;
     }
 
-    &__toggler {
+    &--type-one &__toggler {
       display: none;
     }
   }

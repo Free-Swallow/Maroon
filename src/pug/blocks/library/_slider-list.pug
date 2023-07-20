@@ -1,6 +1,6 @@
 mixin sliderList(data, uniqId, classes)
   each item, index in data
-    div.slider-list.slider-list--close(id=`${uniqId}-${index}`, class=classes)
+    div.slider-list.slider-list--type-one.slider-list--close(id=`${uniqId}-${index}`, class=classes)
       div.slider-list__header
         p.slider-list__title= item.name
         button.slider-list__toggler.slider-list__toggler--close(type="button" aria-label="Кнопка открытия и закрытия меню" data-uniq-id=uniqId data-button-id=index)
