@@ -1,5 +1,6 @@
 .bestsellers {
   @include flex-col;
+  transition: $animation-time-slow;
   padding: 80px 0 80px;
   max-width: 1200px;
 

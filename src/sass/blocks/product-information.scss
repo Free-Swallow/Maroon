@@ -1,6 +1,7 @@
 .product-information {
   @include flex-col;
   overflow-x: hidden;
+  transition: $animation-time-slow;
 
   &__wrapper {
     max-width: 450px;

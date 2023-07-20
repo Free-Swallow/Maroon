@@ -1,14 +1,16 @@
 -
   const product = {
     img: 'img/rose.jpg',
+    imgTablet: 'img/rose-page-tablet.jpg',
+    imgDesktop: 'img/rose-page-desktop.jpg',
     altText: 'Белый крем в стеклянной баночке',
     name: 'Rose',
     description: 'Крем для лица',
     fullDescription: 'Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей. Крем равномерно распределяется по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток.',
-    price: '990P',
+    price: '990 ₽',
     compound: 'Aqua, Cyclomethicone, Dicaprylyl Carbonate, Butylene Glycol, Glycerin, Tapioca Starch, Nelumbium Speciosum Flower Extract, Calendula Officinalis Flower Extract, Propylene Glycol, Tocopherol, Glycine Soja Oil, Dimethiconol, Citronellol, Limonene.',
     modeOfApplication: 'Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода.',
-    volumes: [50, 30],
+    volumes: ['30ml', '50ml'],
     volume: '50ml'
   }
 
@@ -23,16 +25,21 @@
     }
   ]
 
-mixin cardDetails()
-  section.card-details
-    img(src=product.img alt=product.altText, width=290 height=260)
-    div.right-half
+mixin cardDetails(classes)
+  section.card-details.wrapper(class=classes)
+    img.card-details__img.card-details__img--mobile(src=product.img alt=product.altText, width=290 height=260)
+    img.card-details__img.card-details__img--tablet(src=product.imgTablet alt=product.altText, width=678 height=470)
+    img.card-details__img.card-details__img--desktop(src=product.imgDesktop alt=product.altText, width=630 height=647)
+    div.card-details__right-half
       p.card-details__name= product.name
       p.card-details__description= product.description
       p.card-details__full-description= product.fullDescription
-    +sliderListType2(sliderData)
-    form.card-details__form
-      +radioList(product.volumes, 'options', 'Объем:')
-      div.card-details__footer
-        p.card-details__price= product.price
-        +button('submit', 'Добавить в корзину')
+      div.card-details__slider-wrapper
+        +sliderListType2(sliderData, 'product-description', 'card-details__slider')
+      form(method="get").card-details__form
+        div.card-details__type-wrapper
+          h4.card-details__type-title Объем:
+          +radioList(product.volumes, 'card-details__options-list', 'volume')
+        div.card-details__footer
+          p.card-details__price= product.price
+          +button('submit', 'Добавить в корзину')

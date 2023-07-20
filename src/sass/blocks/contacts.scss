@@ -1,5 +1,6 @@
 .contacts {
   @include flex-col;
+  transition: $animation-time-slow;
 
   position: relative;
   margin-bottom: 80px;

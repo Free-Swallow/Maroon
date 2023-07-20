@@ -1,5 +1,5 @@
 -
-  const recentlyList = [
+  const offersList = [
     {
       img: 'img/product-2',
       altText: 'Белый крем в стеклянной баночке',
@@ -34,6 +34,6 @@
     }
   ]
 
-mixin recentlyViewed(classes)
-  section.recently-viewed.wrapper(class=classes)
-    +shortCardList(recentlyList, 'Вы недавно смотрели')
+mixin offersSlider(classes, title)
+  section.wrapper(class=classes)
+    +shortCardList(offersList, title)

@@ -1,0 +1,126 @@
+.card-details {
+  @include flex-col;
+
+  &__img {
+    width: 100%;
+    max-width: 660px;
+    height: auto;
+  }
+
+  &__img--tablet,
+  &__img--desktop {
+    display: none;
+  }
+
+  &__name {
+    font-family: $font-title;
+    font-size: $fs-large;
+    font-weight: $fw-medium;
+    line-height: $lh-set-first;
+    color: $main-dark;
+
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &__description,
+  &__full-description {
+    font-size: $fs-regular;
+    line-height: $lh-set-second;
+  }
+
+  &__description {
+    color: $description-color;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  &__slider {
+    width: 100%;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__type-wrapper {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    column-gap: 17px;
+  }
+
+  &__options-list {
+    margin-top: -5px;
+    display: flex;
+    justify-content: start;
+    column-gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  &__type-title {
+    font-size: $fs-regular;
+    font-weight: $fw-medium;
+    line-height: $lh-set-second;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__footer {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__price {
+    font-size: $fs-medium;
+    font-weight: $fw-medium;
+    line-height: $lh-set-eleven;
+  }
+
+  @media ($tablet) {
+    &__img {
+      max-width: 900px;
+    }
+
+    &__img--mobile {
+      display: none;
+    }
+
+    &__img--tablet {
+      display: inline-block;
+    }
+
+    &__name {
+      font-size: $fs-large-plus;
+      line-height: $lh-set-ninth;
+    }
+
+    &__type-title {
+      font-size: $fs-regular-plus;
+    }
+  }
+
+  @media ($desktop) {
+    flex-direction: row;
+    align-items: start;
+    gap: 70px;
+
+    &__img {
+      max-width: none;
+    }
+
+    &__img--tablet {
+      display: none;
+    }
+
+    &__img--desktop {
+      display: inline-block;
+    }
+  }
+}

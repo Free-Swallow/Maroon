@@ -2,7 +2,7 @@ mixin nav(navLinks, activePage, classes)
   nav.nav(class=classes)
     ul.nav__list
       each item in navLinks
-        li.nav__item
-          a.nav__link(href=`${item.url} ${activePage === item.name ? 'nav-item--active' : ''}`)= item.name
+        li.nav__item(class=`${activePage === item.name ? 'nav__item--active' : ''}`)
+          a.nav__link(href=`${item.url}`)= item.name
     if block
       block
